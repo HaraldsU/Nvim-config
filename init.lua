@@ -45,13 +45,13 @@ vim.api.nvim_create_autocmd('BufWinEnter', {
 
 -- Make a 1-1 terminal layout
 vim.api.nvim_create_user_command('Slay', function()
-	vim.cmd('below 10split')
+	vim.cmd('below 8split')
 	vim.cmd('terminal')
 end, {})
 
 -- Make a 2-1 terminal layout
 vim.api.nvim_create_user_command('Dlay', function()
-	vim.cmd('below 10split')
+	vim.cmd('below 8split')
 	vim.cmd('terminal')
 	vim.cmd('wincmd k')
 	vim.cmd('vsplit')
