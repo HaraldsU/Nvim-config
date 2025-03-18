@@ -51,11 +51,12 @@ require('lspconfig').ccls.setup({
 })
 -- require('lspconfig').lua_ls.setup({})
 
-local cmp = require('cmp')
 
+local cmp = require('cmp')
 cmp.setup({
 	sources = {
 		{name = 'nvim_lsp'},
+		{name = 'nvim_lsp_signature_help'},
 	},
 	snippet = {
 		expand = function(args)

@@ -60,7 +60,7 @@ end, {})
 -- Bracket / quote auto-complete
 -- vim.keymap.set("i", "{", "{<CR>}<Esc>ko", { noremap = true, silent = true })
 vim.keymap.set("i", "{", "{}<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", "(", "()<Esc>ha", { noremap = true, silent = true })
+-- vim.keymap.set("i", "(", "()<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", "[", "[]<Esc>ha", { noremap = true, silent = true })
 vim.keymap.set("i", '"', '""<Esc>ha', { noremap = true, silent = true })
 vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true, silent = true })

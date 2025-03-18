@@ -26,4 +26,7 @@ require("lazy").setup({
 	-- install = { colorscheme = { "gruvbox" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
+	-- git = { 
+	-- 	terminal_cmd = "git clone --progress" 
+	-- },
 })
