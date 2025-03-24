@@ -20,7 +20,11 @@ vim.opt.colorcolumn = "80"
 vim.opt.scrolloff = 8
 vim.opt.splitright = true
 vim.opt.cursorline = true
+-- vim.opt.wrap = false 
+vim.opt.linebreak = true
+vim.opt.breakindent = true
 
+-- Folding
 vim.api.nvim_create_augroup('remember_folds', { clear = true })
 
 vim.api.nvim_create_autocmd('BufWinLeave', {
@@ -56,19 +60,4 @@ vim.api.nvim_create_user_command('Dlay', function()
 	vim.cmd('wincmd k')
 	vim.cmd('vsplit')
 end, {})
-
--- Bracket / quote auto-complete
--- vim.keymap.set("i", "{", "{<CR>}<Esc>ko", { noremap = true, silent = true })
-vim.keymap.set("i", "{", "{}<Esc>ha", { noremap = true, silent = true })
--- vim.keymap.set("i", "(", "()<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", "[", "[]<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", '"', '""<Esc>ha', { noremap = true, silent = true })
-vim.keymap.set("i", "'", "''<Esc>ha", { noremap = true, silent = true })
-vim.keymap.set("i", "`", "``<Esc>ha", { noremap = true, silent = true })
-
-vim.keymap.set('n', '<F3>', function()
-  local view = vim.fn.winsaveview()   
-  vim.cmd("normal! gg=G")             
-  vim.fn.winrestview(view)            
-end, { silent = true })
 
