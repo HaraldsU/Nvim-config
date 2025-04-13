@@ -39,7 +39,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- These are example language servers. 
 require('lspconfig').gleam.setup({})
 require('lspconfig').ocamllsp.setup({})
-require('lspconfig').ccls.setup({
+require('lspconfig').ccls.setup({ -- For C
 	init_options = {
 		clang = {
 			extraArgs = {
@@ -49,6 +49,7 @@ require('lspconfig').ccls.setup({
 		},
 	},
 })
+require('lspconfig').texlab.setup({})
 -- require('lspconfig').lua_ls.setup({})
 
 
